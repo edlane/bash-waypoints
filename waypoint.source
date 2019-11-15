@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+READLINE="python3 ./waypoint.py"
+
+STATUS=-1
+waypoint () {
+  if [ $STATUS -eq 4 ]; then
+    echo ">> $*"
+    eval $*
+    return
+  fi
+  while [ true ]; do
+    $READLINE $*
+    STATUS=$?
+    if [ $STATUS -eq 0 ]; then break ; fi
+    if [ $STATUS -eq 1 ]; then echo "next waypoint..." ; break ; fi
+    if [ $STATUS -eq 2 ]; then echo "redoing waypoint..." ; fi
+    if [ $STATUS -eq 3 ]; then echo "aborting..." ; exit ; fi
+    if [ $STATUS -eq 4 ]; then echo "running..." ; break ; fi
+  done
+}
