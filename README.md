@@ -1,5 +1,5 @@
 # bash-waypoints
-Augment bash scripts with REPL (Read–Eval–Print-Loop) waypoints -- a simple "(**n**)ext, r(**e**)do, (**a**)bort, (**r**)un" and **readline**-style editor for bash scripts .
+Augment bash scripts with REPL (Read-Eval-Print-Loop) waypoints -- a simple "(**n**)ext, r(**e**)do, (**a**)bort, (**r**)un" and **readline**-style editor for bash scripts .
 
  - Clone this repo
  - **cd** to the locally cloned directory
