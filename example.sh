@@ -6,7 +6,7 @@ source ./waypoint.source
 waypoint echo "\">>>>>>>>>>>> Test for waypoints <<<<<<<<<<<<\""
 
 
-# ------------ a waypoint which with options...
+# ------------ a waypoint with options...
 waypoint uname -a
 
 waypoint echo $*
